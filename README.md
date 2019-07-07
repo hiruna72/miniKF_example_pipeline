@@ -3,7 +3,7 @@ use miniKF to understand kubernetes and kubeflow concepts by creating a small pi
 
 ##### disclaimer
 
-The following guide is prepared with the knowledge that I have gained, the information below may no be accurate
+The following guide is prepared with what I have learnt using MiniKF, the content below may no be accurate.
 
 ---
 
