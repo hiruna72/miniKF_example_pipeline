@@ -53,5 +53,5 @@ minikF has following collaborators
 * host the docker images in a cloud
 * define components followed by the pipeline in a python script
 * compile the pipeline using Kubeflow Pipelines SDK
-* Use Rok to get a snapshot of the data directory
+* Use Rok to get a snapshot of the data directory (copy the [this content](https://github.com/hiruna72/miniKF_example_pipeline/tree/master/data) to the data volume of the notebook server)
 * Upload and run the pipeline on miniKF
