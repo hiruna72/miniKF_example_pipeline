@@ -52,7 +52,7 @@ Step number 1,2 & 3 are optional as the docker images are already hosted in dock
 2. build docker containers to run the scripts - one container for one script
 3. host the docker images in a cloud
 4. define components and the pipeline in a python script https://github.com/hiruna72/miniKF_example_pipeline/blob/master/small_pipeline.py
-5. compile the pipeline using Kubeflow Pipelines SDK
+5. compile the pipeline using Kubeflow Pipelines SDK https://github.com/hiruna72/miniKF_example_pipeline/blob/master/small_pipeline.tar.gz
 6. Use Rok to get a snapshot of the data directory (copy [this content](https://github.com/hiruna72/miniKF_example_pipeline/tree/master/data) to the data volume of the notebook server)
 7. Upload and run the pipeline on miniKF
 
