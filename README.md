@@ -51,7 +51,7 @@ minikF has following collaborators
 * write python scripts implementing the given objective https://github.com/hiruna72/miniKF_example_pipeline/tree/master/python_scripts
 * build docker containers to run the scripts - one container for one script
 * host the docker images in a cloud
-* define components followed by the pipeline in a python script
+* define components and the pipeline in a python script https://github.com/hiruna72/miniKF_example_pipeline/blob/master/small_pipeline.py
 * compile the pipeline using Kubeflow Pipelines SDK
-* Use Rok to get a snapshot of the data directory (copy the [this content](https://github.com/hiruna72/miniKF_example_pipeline/tree/master/data) to the data volume of the notebook server)
+* Use Rok to get a snapshot of the data directory (copy [this content](https://github.com/hiruna72/miniKF_example_pipeline/tree/master/data) to the data volume of the notebook server)
 * Upload and run the pipeline on miniKF
