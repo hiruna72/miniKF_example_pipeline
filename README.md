@@ -74,5 +74,5 @@ docker push "$full_image_name_1"
 docker inspect --format="{{index .RepoDigests 0}}" "${full_image_name_1}"
 ```
 
-`docker inspect` command outputs a hash link to the hosted image. This should be used when defining components. ex: https://github.com/hiruna72/miniKF_example_pipeline/blob/2629e0aab48c82dd925e763a608f1ef1a1c1da43/small_pipeline.py#L27
+`docker inspect` command outputs a hash link to the hosted image. This should be used when [defining components](https://github.com/hiruna72/miniKF_example_pipeline/blob/2629e0aab48c82dd925e763a608f1ef1a1c1da43/small_pipeline.py#L27)
 
