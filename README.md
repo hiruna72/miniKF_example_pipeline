@@ -42,6 +42,8 @@ minikF has following collaborators
 
 * Building a pipeline with three components. The first two components are ideal. Each of them has a text file as input and outputs to a file. The third component reads the two output files and concatenates the content.
 
+![pipeline](https://github.com/hiruna72/miniKF_example_pipeline/blob/master/small_pipeline.png)
+
 ##### Steps
 
 Step number 1,2 & 3 are optional as the docker images are already hosted in docker hub. To learn how to build and host docker images read [Docker images](#docker-images)
