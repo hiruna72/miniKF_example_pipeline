@@ -1,6 +1,10 @@
 # MiniKF_example_pipeline
 use miniKF to understand kubernetes and kubeflow concepts by creating a small pipeline
 
+##### disclaimer
+
+The following guide is prepared with the knowledge that I have gained, the information below may no be accurate
+
 ---
 
 #### Installation
