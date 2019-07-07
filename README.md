@@ -48,7 +48,7 @@ minikF has following collaborators
 
 ##### Steps
 
-* write python scripts implementing the given objective
+* write python scripts implementing the given objective (https://github.com/hiruna72/miniKF_example_pipeline/tree/master/python_scripts)
 * build docker containers to run the scripts - one container for one script
 * host the docker images in a cloud
 * define components followed by the pipeline in a python script
