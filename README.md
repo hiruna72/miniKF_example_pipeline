@@ -46,14 +46,33 @@ minikF has following collaborators
 
 * Building a pipeline with three components. The first two components are ideal. Each of them has a text file as input and outputs to a file. The third component reads the two output files and concatenates the content.
 
-![pipeline](https://github.com/hiruna72/miniKF_example_pipeline/blob/master/small_pipeline.png)
-
 ##### Steps
 
-* write python scripts implementing the given objective https://github.com/hiruna72/miniKF_example_pipeline/tree/master/python_scripts
-* build docker containers to run the scripts - one container for one script
-* host the docker images in a cloud
-* define components and the pipeline in a python script https://github.com/hiruna72/miniKF_example_pipeline/blob/master/small_pipeline.py
-* compile the pipeline using Kubeflow Pipelines SDK
-* Use Rok to get a snapshot of the data directory (copy [this content](https://github.com/hiruna72/miniKF_example_pipeline/tree/master/data) to the data volume of the notebook server)
-* Upload and run the pipeline on miniKF
+Step number 1,2 & 3 are optional as the docker images are already hosted in docker hub. To learn how to build and host docker images read [Docker images](#docker-images)
+
+1. write python scripts implementing the given objective https://github.com/hiruna72/miniKF_example_pipeline/tree/master/python_scripts
+2. build docker containers to run the scripts - one container for one script
+3. host the docker images in a cloud
+4. define components and the pipeline in a python script https://github.com/hiruna72/miniKF_example_pipeline/blob/master/small_pipeline.py
+5. compile the pipeline using Kubeflow Pipelines SDK
+6. Use Rok to get a snapshot of the data directory (copy [this content](https://github.com/hiruna72/miniKF_example_pipeline/tree/master/data) to the data volume of the notebook server)
+7. Upload and run the pipeline on miniKF
+
+#### Docker Images
+
+Once you have the Dockerfile ready easiest way to build and host docker image is to use a bash script. In the following example `dockerhubusername` should be set 
+
+```bash
+docker login --username ${dockerhubusername}
+image_name_1=${dockerhubusername}/multiplier # Specify the image name here
+image_tag_1=multiplier
+full_image_name_1=${image_name_1}:${image_tag_1}
+base_image_tag_1=1.12.0-py3
+
+docker build --build-arg BASE_IMAGE_TAG=${base_image_tag_1} -t "${full_image_name_1}" .
+docker push "$full_image_name_1"
+docker inspect --format="{{index .RepoDigests 0}}" "${full_image_name_1}"
+```
+
+`docker inspect` command outputs a hash link to the hosted image. This should be used when defining components. ex: https://github.com/hiruna72/miniKF_example_pipeline/blob/2629e0aab48c82dd925e763a608f1ef1a1c1da43/small_pipeline.py#L27
+
