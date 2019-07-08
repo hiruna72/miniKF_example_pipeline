@@ -1,0 +1,16 @@
+name: read_online_data
+description: read_online_dat
+inputs:
+- {name: Input 1 URI, type: BaseType}
+implementation:
+  container:
+    # Name of a container image that you've pushed to a container repo.
+    image: hiruna72/norok@sha256:9bd1a6b6129b6750335a685bbf839cca4b5b5b95c96a3ad634c79ceb41ffce0d
+    # command is a list of strings (command-line arguments). 
+    # The YAML language has two syntaxes for lists and you can use either of them. 
+    # Here we use the "flow syntax" - comma-separated strings inside square brackets.
+    command: [
+      python3, /pipelines/component/src/noRok.py,
+      --input1-path,
+      {inputValue: Input 1 URI}, # Refers to the "Input 1 URI" input
+    ]
